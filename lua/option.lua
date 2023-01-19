@@ -1,7 +1,5 @@
 -- [[ Setting options ]]
 -- See `:help vim.o`
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
 -- Set highlight on search
 vim.o.hlsearch = false
 
@@ -25,10 +23,6 @@ vim.o.smartcase = true
 vim.o.updatetime = 250
 vim.wo.signcolumn = 'yes'
 
--- Set colorscheme
-vim.o.termguicolors = true
-vim.cmd [[colorscheme onedark]]
-
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
@@ -38,11 +32,3 @@ vim.o.completeopt = 'menuone,noselect'
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
-
--- Keymaps for better default experience
--- See `:help vim.keymap.set()`
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
-
--- Remap for dealing with word wrap
-vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })

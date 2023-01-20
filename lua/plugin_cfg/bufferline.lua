@@ -6,6 +6,7 @@ require("bufferline").setup{
 }
 
 -- Navigate buffers
-vim.keymap.set("n", "<C-h>", ":bnext<CR>")
-vim.keymap.set("n", "<C-l>", ":bprevious<CR>")
+vim.keymap.set("n", "<C-l>", ":bnext<CR>", { desc = "Shift window to the next buffer" })
+vim.keymap.set("n", "<C-h>", ":bprevious<CR>", { desc = "Shift window to the previous buffer" })
+vim.keymap.set("n", "<C-c>", ":bd<CR>", { desc = "Close current buffer" })
 
